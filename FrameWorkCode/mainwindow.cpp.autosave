@@ -60,6 +60,35 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+// Functions written by Kaushal-04
+void MainWindow::on_actionBold_triggered()
+{
+    QTextCharFormat fmt;
+    fmt.setFontWeight(QFont::Bold);
+    textEdit->mergeCurrentCharFormat(fmt);
+}
+
+void MainWindow::on_actionUnbold_triggered()
+{
+    QTextCharFormat fmt;
+    fmt.setFontWeight(QFont::Normal);
+    textEdit->mergeCurrentCharFormat(fmt);
+}
+
+void MainWindow::on_actionSubscript_triggered()
+{
+    QTextCharFormat fmt;
+    fmt.setVerticalAlignment(QTextCharFormat::AlignSubScript);
+    textEdit->mergeCurrentCharFormat(fmt);
+}
+
+void MainWindow::on_actionSuperscript_triggered()
+{
+    QTextCharFormat fmt;
+    fmt.setVerticalAlignment(QTextCharFormat::AlignSuperScript);
+    textEdit->mergeCurrentCharFormat(fmt);
+}
+
 
 
 /*
